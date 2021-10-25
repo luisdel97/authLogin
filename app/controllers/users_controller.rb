@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorized, only: [:auto_login]
+  skip_before_action :verify_authenticity_token
 
   # REGISTER
   def create
